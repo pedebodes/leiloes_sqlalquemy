@@ -1,0 +1,38 @@
+Prototipo da API (draft/mindstorm)
+
+/fornecedor/
+    POST: cria fornecedor
+/fornecedor/<id>/
+    POST/PUT: replace
+    GET: busca dados
+    DELETE: deleta
+    PATCH: atualiza parcialmente
+/leilao/
+    GET: retorna todos os leiloes ativos para este usuario (todos se admin)
+    POST: cria novo leilao com todos os dados
+/leilao/<id>/
+    GET: retorna dados do leilao
+/leilao/<id>/item/
+    GET: retorna itens do leilao
+/leilao/<id>/item/<id>/
+    GET: retorna dados detalhados do item
+/leilao/<id>/fornecedores/
+    GET: lista fornecedores convidados
+/leilao/<id>/participantes/
+    GET: lista fornecedores participantes (que deram lance)
+/leilao/<id>/lances/
+    GET: retorna lances (permissoes!)
+/leilao/<id>/lance/
+    GET: retorna ultimo lance deste usuario
+    POST: cria lance
+    PATCH: atualiza lance (admin)
+/leilao/<id>/anexos/
+    GET: retorna URLs para anexos do leilão
+/gabaritos/leilao/
+    GET: retorna gabaritos validos para o usuario ativo
+/gabaritos/leilao/<id>/
+    GET: retorna dados do gabarito especifico
+/gabaritos/atributos/
+    GET: retorna gabaritos de itens/atributos
+/gabaritos/atributos/<id>/
+    GET: retorna dados do gabarito especifico
